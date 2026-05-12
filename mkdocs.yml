@@ -1,0 +1,9 @@
+site_name: My Docs
+
+nav:
+  - Fase 1:
+    - Modelo de Qualidade e Escopo: fase1/5.md
+
+theme:
+  name: material
+  language: pt-BR
