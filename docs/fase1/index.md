@@ -150,7 +150,74 @@ Para fundamentar a avaliação, são utilizados artefatos que comprovam o atendi
 --- 
 
 ## 8. Sustentabilidade (ODS e metas)
-[Inserir texto aqui]
+
+## 8.1 Identificação das ODS e submetas
+
+Através do objetivo e premissa geral do software **Mural UnB** estabelecido no próprio README do projeto no GitHub pelos mantenedores: 
+
+“O Mural UnB é uma plataforma digital projetada para centralizar e recomendar oportunidades acadêmicas e profissionais dentro da Universidade de Brasília (UnB). 
+
+O objetivo é criar uma experiência personalizada, onde os estudantes possam facilmente descobrir oportunidades alinhadas aos seus interesses e histórico acadêmico. 
+
+Ao analisar o perfil do usuário, a plataforma recomenda as opções mais relevantes e envia notificações sobre novas vagas. Inclui oportunidades como: 
+
+* Empresas juniores 
+* Laboratórios de pesquisa 
+* Equipes de Competição 
+
+Em resumo, o Mural UnB funciona como um mural virtual, que vai além de apenas listar oportunidades — ele ajuda os estudantes a se conectarem com as oportunidades certas, no momento certo.”
+
+podemos paralelizar os seguintes **Objetivos de Desenvolvimentos Sustentável (ODS)** especificados pela **Organização das Nações Unidas (ONU)** que impactam diretamente a sociedade:
+
+
+* ODS 4: Assegurar a educação inclusiva e equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todas e todos.
+
+   * Através da visualização de oportunidades profissionais e de educação de qualidade visando desenvolvimento de habilidades técnicas a todos seus usuários, o software se alinha justamente as seguintes submetas do ODS 4:
+
+      * ODS 4.3 - Até 2030, assegurar a igualdade de acesso para todos os homens e mulheres à educação técnica, profissional e superior de qualidade, a preços acessíveis, incluindo universidade.
+
+      * ODS 4.4 - Até 2030, aumentar substancialmente o número de jovens e adultos que tenham habilidades relevantes, inclusive competências técnicas e profissionais, para emprego, trabalho decente e empreendedorismo.
+
+
+* ODS 8: Promover o crescimento econômico sustentado, inclusivo e sustentável, emprego pleno e produtivo e trabalho decente para todas e todos.
+
+   * Através da visualização de oportunidades profissionais o software cumpre com a seguinte submeta do ODS 8:
+
+      * ODS 8.6 - Até 2020, reduzir substancialmente a proporção de jovens sem emprego, educação ou formação.
+
+* ODS 9: Construir infraestruturas resilientes, promover a industrialização inclusiva e sustentável, e fomentar a inovação
+
+   * O principal conceito do Mural UnB é fomentar a inovação através de oportunidades acadêmicas como por exemplo através da participação de laboratórios de pesquisa, portanto ele se enquadra nas seguintes submetas do ODS 9:
+
+      * ODS 9.5 – Fortalecer a pesquisa científica, melhorar as capacidades tecnológicas de setores industriais em todos os países, particularmente nos países em desenvolvimento, inclusive, até 2030, incentivando a inovação e aumentando substancialmente o número de trabalhadores de pesquisa e desenvolvimento por milhão de pessoas e os gastos público e privado em pesquisa e desenvolvimento.
+
+      * ODS 9.b – Apoiar o desenvolvimento tecnológico, a pesquisa e a inovação nacionais nos países em desenvolvimento, inclusive garantindo um ambiente político propício para, entre outras coisas, diversificação industrial e agregação de valor às commodities.
+
+## 8.1 Identificação dos Indicadores
+
+Com isso conseguimos identificar que através da proposta do objetivo geral e da premissa citada o software tem como meta de cumprimento às submetas de ODS identificadas que contribuem para o crescimento dos seguintes indicadores: 
+
+* ODS 4
+
+   * Indicador 4.3.1 - Taxa de participação de jovens e adultos na educação formal e não formal, nos últimos doze meses, por sexo. 
+
+   * Indicador 4.4.1 - Proporção de jovens e adultos com habilidades em tecnologias de informação e comunicação (TICs), por tipo de habilidade.
+
+* ODS 8
+
+   * Indicador 8.6.1 - Redução no percentual de pessoas de 15 a 24 anos não ocupadas, não estudantes e que não estão em treinamento para um trabalho. 
+
+* ODS 9
+
+   * Indicador 9.5.1 - Dispêndio em P&D em proporção do PIB. 
+
+   * Indicador 9.5.2 - Pesquisadores (em equivalência de tempo integral) por milhão de habitantes. 
+
+   * Indicador 9.b.1 - Proporção do valor adicionado nas indústrias de média e alta intensidade tecnológica no valor adicionado total.
+ 
+## 8.3 Alinhamento com a Avaliação de Qualidade do Produto de Software
+
+Portanto a avaliação de qualidade do Mural UnB que vamos orquestrar com foco nas características de confiabilidade e segurança não tem como objetivo apenas medir essas características sem pretenção alguma, mas sim verificar se através das métricas obtidas o software impacta a sociedade positivamente através de uma ferramenta que de fato possui qualidade nos aspectos observados, sendo esses os aspectos mais relevantes para o contexto do software conforme identificado na sessão “**6. Seleção de Características**”.
 
 ---
 
@@ -161,6 +228,10 @@ Links importantes para validação do professor.
 - **Link do Repositório Git:** [Inserir link]
 - **Link da Release (EU1):** [Inserir link da tag/release]
 - **Link para Dados Brutos/Gravações:** [Inserir link do repositório onde estão as entrevistas/dados auditáveis, se aplicável]
+- **Repositório GitHub Mural UnB:** UNIVERSIDADE DE BRASÍLIA. 2025-2-Mural-UnB. GitHub, 2024. Disponível em: https://github.com/unb-mds/2025-2-Mural-UnB. Acesso em: 13 maio 2026.
+- **ODS 4 (Educação): IPEA. Instituto de Pesquisa Econômica Aplicada.** ODS 4 - Educação de Qualidade: indicadores para o Brasil. Brasília: IPEA, [202-]. Disponível em: https://www.ipea.gov.br/ods/ods4_card.html. Acesso em: 13 maio 2026.
+- **ODS 8 (Trabalho): IPEA. Instituto de Pesquisa Econômica Aplicada.** ODS 8 - Trabalho Decente e Crescimento Econômico: indicadores para o Brasil. Brasília: IPEA, [202-]. Disponível em: https://www.ipea.gov.br/ods/ods8_card.html. Acesso em: 13 maio 2026.
+- **ODS 9 (Indústria/Inovação): IPEA. Instituto de Pesquisa Econômica Aplicada.** ODS 9 - Indústria, Inovação e Infraestrutura: indicadores para o Brasil. Brasília: IPEA, [202-]. Disponível em: https://www.ipea.gov.br/ods/ods9_card.html. Acesso em: 13 maio 2026.
 
 ---
 
