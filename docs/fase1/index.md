@@ -29,66 +29,49 @@ Os dados e diagnósticos obtidos com a avaliação serão utilizados em duas fre
 
 ---
 
-## 5. Modelo de Qualidade e Escopo
+## 5. Modelo de Qualidade
 
-### 5.1 Modelo de Qualidade e Escopo
+O modelo adotado é o **Modelo de Qualidade do Produto SQuaRE (ISO/IEC 25010)**. O modelo de qualidade do produto originalmente categoriza as propriedades de qualidade do produto de software em oito características: adequação funcional, eficiência de desempenho, compatibilidade, usabilidade, confiabilidade, segurança, manutenibilidade e portabilidade. Cada característica é composta por um conjunto de subcaracterísticas relacionadas.
 
-O modelo adotado é o **Modelo de Qualidade de Produto SQuaRE (ISO/IEC 25010)**. O escopo desta avaliação concentra-se na plataforma **Mural UnB**, um sistema voltado para a centralização e disseminação de informações acadêmicas. O objetivo é garantir que a plataforma seja tecnicamente robusta e segura para os estudantes.
+![diagrama](../imagem/DiagramaOriginal.png)
+> Figura: Diagrama Qualidade de Produto. Fonte: Norma 25010
 
-### 5.2 Introdução e Seleção de Características
+### 5.1 Adaptação do Modelo
 
-A qualidade é definida como grau em que o sistema satisfaz requisitos especificados e as necessidades dos usuários. Para esta avaliação foram selecionadas as seguintes características:
+Adaptamos o modelo SQuaRE (ISO/IEC 25010) original para ignorar as visões de "Manufatura" (concentrada em processos internos de codificação) e pela ideia de focar estritamente na **Visão do Produto** e **Visão do Usuário**. Além de não selecionarmos usabilidade pela restrição da atividade. Essas escolha são justificadas pelas necessidades dos principais stakeholders (estudantes, professores e administração), que dependem da veracidade absoluta e do acesso ininterrupto às informações acadêmicas oficiais.
+
+Então, selecionamos as características desejadas por meio da fórmula: **Prioridade = Peso × (Impacto × Risco)**. Isso permite focar nos riscos críticos da persona, evitando avaliações de subcaracterísticas de baixo valor para o nosso objetivo. Falaremos mais sobre a escolha e priorizações no próximo tópico.
+
+Assim, para esta avaliação foram selecionadas as seguintes características:
+
+**SQuaRE (ISO/IEC 25010)**
 
 1. **Confiabilidade (Reliability)**: Define o grau em que o sistema executa funções específicas sob condições estabelecidas por um período de tempo.
 2. **Segurança (Security)**: Fundamental para proteger os dados e as informações contra acessos e modificações não autorizadas.
 
-**Nota**: A característica "Usabilidade" foi excluída conforme solicitado, apesar de sua importância em sistemas de mural, para focar na integridade e disponibilidade dos dados.
+### 5.2 Diagrama Adaptado (visão geral)
 
-### 5.3 Diagrama e Justificativa de Priorização
 O diagrama abaixo foca na hierarquia das qualidades selecionadas para o Mural UnB:
 
 ![diagrama](../imagem/Diagrama.jpeg)
+> Figura: Diagrama Qualidade de Produto. Autor: Lucas
 
-> Qualidade de Produto SQuaRE (ISO/IEC 25010) com as duas características prioritárias para a Fase 1
+--- 
 
-* **SQuaRE (ISO/IEC 25010)**
+## 6. Seleção de Características
 
-    * **Confiabilidade**
-        * Subcaracterísticas: Maturidade, Disponibilidade, Tolerância a Falhas, Recuperabilidade.
+Como visto acima, selecionamos Confiabilidade e Segurança.
 
-    * **Segurança**
-        * Subcaracterísticas: Confidencialidade, Integridade, Não-repúdio, Responsabilidade, Autenticidade.
+### 6.1 Justificativa de Priorização
 
-A justificativa de priorização reside no fato de o Mural UnB lidar com avisos oficiais e horários. A **Confiabilidade** é prioritária para garantir que o serviço não fique indisponível durante períodos críticos (como a matrícula). Enquanto a **Segurança** é essencial para evitar que usuários não autorizados alterem informações públicas, o quê causaria desinformação na comunidade acadêmica. A Usabilidade foi excluída para focar na base técnica.
+A justificativa de priorização reside no fato de o Mural UnB lidar com avisos oficiais e horários. A **Confiabilidade** é prioritária para garantir que o serviço não fique indisponível durante períodos críticos (como a matrícula). Enquanto a **Segurança** é essencial para evitar que usuários não autorizados alterem informações públicas, o quê causaria desinformação na comunidade acadêmica.
 
-### 5.4 Escopo da Avaliação
+### 6.2 Classificação de Subcaracterísticas (Escala 1 a 5)
 
-A avaliação será limitada ao backend (API), que gerencia o feed de notícias e a persistência dos dados no banco de dados. Ao passo que a profundidade será o Nível 3 (Análise detalhada das subcaracterísticas por meio de métricas derivadas e propriedades mensuráveis). Ressalte-se que fora de escopo existe a interface do usuário (Front-end), performance em dispositivos móveis específicos e portabilidade para outros sistemas operacionais, porque o foco inicial é a estabilidade do núcleo da informação antes de validar a experiência estética.
-
-### 5.5 Adaptação do Modelo
-
-O modelo SQuaRE (ISO/IEC 25010) original foi adaptado para ignorar as visões de "Manufatura" (concentrada em processos internos de codificação) e pela ideia de focar estritamente na **Visão do Produto** e **Visão do Usuário** no que tange à confiança na informação. A qualidade é um conceito complexo e altamente dependente do domínio e contexto de uso. As características são selecionadas por meio da fórmula: **Prioridade = Peso × (Impacto × Risco)**. Isso permite focar nos riscos críticos da persona, evitando avaliações exaustivas de subcaracterísticas de baixo valor para o objetivo específico. A seleção considera que a melhoria de um fator (como usabilidade ou flexibilidade) pode reduzir outros (como a eficiência do software) (Trade-offs – compromissos -).
-
-#### Escopo, Artefatos e Profundidade
-
-**Breve Escopo:**
-A avaliação concentra-se nos módulos de backend e persistência do **Mural UnB**, especificamente a API que gerencia o feed de notícias e a lógica de autenticação de usuários. O objetivo é garantir a robustez técnica e a proteção contra falhas críticas que possam comprometer a disseminação de informações acadêmicas oficiais.
-
-**Tipos de Arquivo e Artefatos de Evidência:**
-Para fundamentar a avaliação, são utilizados artefatos que comprovam o atendimento aos requisitos:
-
-* **Documentação Técnica**: Arquivos em **.pdf** e **.md** contendo diagramas BPMN, tabelas 5W2H e diagramas de classe UML.
-* **Código-Fonte e Scripts (.cpp, .py)**: Scripts **Python** de comunicação e arquivos C++ para algoritmos de processamento. Algoritmos de ordenação de notícias e scripts de comunicação serial para hardware integrado (Raspberry Pi).
-* **Planejamento de Testes (.xlsx)**: Planilhas de medição baseadas no método **GQM (Goal Question Metric)** e Abstraction Sheets, Matrizes de Rastreabilidade.
-* **Registros de Execução**: Logs de monitoramento de servidor e relatórios de vulnerabilidades.
-
-**Níveis de Profundidade da Avaliação:** A profundidade segue a estrutura de variáveis identificadoras da qualidade proposta pela SQuaRE:
-
-* **Nível 1 (Identificação)**: Identificação do conjunto de propriedades, juntas, que cobrem a subcaracterística (ex: contagem de bugs por linha de código).
-* **Nível 2 (Medição)**: Obtenção de medidas de qualidade específicas para cada propriedade identificada por meio de testes e métricas estáticas.
-* **Nível 3 (Integração)**: Combinação computacional das medidas anteriores para chegar a uma medida de qualidade derivada correspondente à subcaracterística avaliada (ex: índice final de disponibilidade).
-
-### 5.6 Classificação de Subcaracterísticas (Escala 1 a 5)
+1. **Confiabilidade (Reliability)**: 
+    * Subcaracterísticas: Maturidade, Disponibilidade, Tolerância a Falhas, Recuperabilidade.
+2. **Segurança (Security)**: 
+    * Subcaracterísticas: Confidencialidade, Integridade, Não-repúdio, Responsabilidade, Autenticidade.
 
 #### Confiabilidade (Reliability)
 
@@ -119,7 +102,15 @@ Para fundamentar a avaliação, são utilizados artefatos que comprovam o atendi
 
 No tocante aos Níveis de Profundidade, as Subcaracterísticas com nível 5 exigirão testes de estresse (Disponibilidade) e testes de invasão/SQL Injection (Integridade). As de Níveis 3 e 4 envolverão apenas análise documental e revisões de código. Este método avalia dois eixos fundamentais, quais sejam, o de impacto, que é a magnitude das consequências negativas para o Mural  UnB e seus usuários caso a subcaracterística falhe (exemplo: desinformação em massa) e o de risco (probabilidade), que é  a chance de uma ameaça explorar uma vulnerabilidade do sistema, considerando o ambiente de uso e histórico de falhas.
 
-### 5.7 Matriz de Priorização (Ponderada)
+### 6.3 Método de Priorização
+
+O método adotado é a Priorização Quantitativa Ponderada. Este método calcula a relevância de cada subcaracterística através da fórmula:
+
+    Prioridade = Peso da Característica X (Impacto X Risco)
+
+O peso define a importância estratégica da característica para o negócio (Confiabilidade = 10; Segurança = 9). Enquanto o impacto (0-5) avalia a gravidade da falha para o usuário final. E o risco (0-5) avalia a probabilidade de ocorrência de falhas ou vulnerabilidades no contexto atual do sistema. Essa abordagem permite um critério de Go/No-Go fundamentado, focando os esforços de teste nos pontos de maior risco sistêmico.
+
+### 6.4 Matriz de Priorização (Ponderada)
 
 A priorização utiliza uma escala de 0 a 5 para Impacto e Risco, multiplicada pelo peso da característica.
 
@@ -131,26 +122,32 @@ A priorização utiliza uma escala de 0 a 5 para Impacto e Risco, multiplicada p
 | **Recuperabilidade** | 10 | 3 | 3 | 90 | **Média** |
 | **Confidencialidade** | 9 | 2 | 2 | 36 | **Baixa** |
 
-### 5.8 Método de Priorização
+--- 
 
-O método adotado é a Priorização Quantitativa Ponderada. Este método calcula a relevância de cada subcaracterística através da fórmula:
+## 7. Escopo da Avaliação
 
-    Prioridade = Peso da Característica X (Impacto X Risco)
+A avaliação será limitada ao backend (API), que gerencia o feed de notícias e a persistência dos dados no banco de dados. Ao passo que a profundidade será o Nível 3 (Análise detalhada das subcaracterísticas por meio de métricas derivadas e propriedades mensuráveis). Ressalte-se que fora de escopo existe a interface do usuário (Front-end), performance em dispositivos móveis específicos e portabilidade para outros sistemas operacionais, porque o foco inicial é a estabilidade do núcleo da informação antes de validar a experiência estética.
 
-O peso define a importância estratégica da característica para o negócio (Confiabilidade = 10; Segurança = 9). Enquanto o impacto (0-5) avalia a gravidade da falha para o usuário final. E o risco (0-5) avalia a probabilidade de ocorrência de falhas ou vulnerabilidades no contexto atual do sistema. Essa abordagem permite um critério de Go/No-Go fundamentado, focando os esforços de teste nos pontos de maior risco sistêmico.
+#### Escopo, Artefatos e Profundidade
 
----
+**Breve Escopo:**
+A avaliação concentra-se nos módulos de backend e persistência do **Mural UnB**, especificamente a API que gerencia o feed de notícias e a lógica de autenticação de usuários. O objetivo é garantir a robustez técnica e a proteção contra falhas críticas que possam comprometer a disseminação de informações acadêmicas oficiais.
 
-## 6. Seleção de características de qualidade (SQuaRE)
-- **Característica 1:** [Inserir nome da Característica, ex: Segurança]
-- **Característica 2:** [Inserir nome da Característica, ex: Desempenho]
+**Tipos de Arquivo e Artefatos de Evidência:**
+Para fundamentar a avaliação, são utilizados artefatos que comprovam o atendimento aos requisitos:
 
----
+* **Documentação Técnica**: Arquivos em **.pdf** e **.md** contendo diagramas BPMN, tabelas 5W2H e diagramas de classe UML.
+* **Código-Fonte e Scripts (.cpp, .py)**: Scripts **Python** de comunicação e arquivos C++ para algoritmos de processamento. Algoritmos de ordenação de notícias e scripts de comunicação serial para hardware integrado (Raspberry Pi).
+* **Planejamento de Testes (.xlsx)**: Planilhas de medição baseadas no método **GQM (Goal Question Metric)** e Abstraction Sheets, Matrizes de Rastreabilidade.
+* **Registros de Execução**: Logs de monitoramento de servidor e relatórios de vulnerabilidades.
 
-## 7. Escopo, profundidade e objetos de avaliação
-[Inserir texto aqui]
+**Níveis de Profundidade da Avaliação:** A profundidade segue a estrutura de variáveis identificadoras da qualidade proposta pela SQuaRE:
 
----
+* **Nível 1 (Identificação)**: Identificação do conjunto de propriedades, juntas, que cobrem a subcaracterística (ex: contagem de bugs por linha de código).
+* **Nível 2 (Medição)**: Obtenção de medidas de qualidade específicas para cada propriedade identificada por meio de testes e métricas estáticas.
+* **Nível 3 (Integração)**: Combinação computacional das medidas anteriores para chegar a uma medida de qualidade derivada correspondente à subcaracterística avaliada (ex: índice final de disponibilidade).
+
+--- 
 
 ## 8. Sustentabilidade (ODS e metas)
 [Inserir texto aqui]
