@@ -63,7 +63,7 @@ O modelo adotado é o **Modelo de Qualidade do Produto SQuaRE (ISO/IEC 25010)**.
 
 ### 4.1 Adaptação do Modelo
 
-Adaptamos o modelo SQuaRE (ISO/IEC 25010) original para ignorar as visões de "Manufatura" (concentrada em processos internos de codificação) e pela ideia de focar estritamente na **Visão do Produto** e **Visão do Usuário**. Além de não selecionarmos usabilidade pela restrição da atividade. Essas escolha são justificadas pelas necessidades dos principais stakeholders (estudantes, professores e administração), que dependem da veracidade absoluta e do acesso ininterrupto às informações acadêmicas oficiais.
+Adaptamos o modelo SQuaRE (ISO/IEC 25010) original para ignorar as visões de "Manufatura" (concentrada em processos internos de codificação) e pela ideia de focar estritamente na **Visão do Produto** e **Visão do Usuário**. Além de não selecionarmos usabilidade pela restrição da atividade. Essas escolhas são justificadas pelas necessidades dos principais stakeholders (estudantes, professores e administração), que dependem da veracidade absoluta e do acesso ininterrupto às informações acadêmicas oficiais.
 
 Então, selecionamos as características desejadas por meio da fórmula: **Prioridade = Peso × (Impacto × Risco)**. Isso permite focar nos riscos críticos da persona, evitando avaliações de subcaracterísticas de baixo valor para o nosso objetivo. Falaremos mais sobre a escolha e priorizações no próximo tópico.
 
