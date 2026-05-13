@@ -1,18 +1,29 @@
-site_name: avaliação de qualidade
-
-nav:
-  - Fase 1:
-    - 1. Requisitante e partes interessadas: fase1/requisitantes.md
-    - 2. Descrição estruturada do software: fase1/descricao_software.md
-    - 3. Classificação do tipo de produto: fase1/classificacao_produto.md
-    - 4. Propósito da avaliação: fase1/proposito_avaliacao.md
-    - 5. Modelo de Qualidade e Escopo: fase1/modelo_qualidade.md
-    - 6. Seleção de características de qualidade: fase1/selecao_caracteristicas.md
-    - 7. Escopo e objetos de avaliação: fase1/escopo_avaliacao.md
-    - 8. Sustentabilidade (ODS e metas): fase1/sustentabilidade.md
-    - 9. Referências de rastreabilidade: fase1/rastreabilidade.md
-    - 10. Tabela de contribuição da equipe: fase1/contribuicao_equipe.md
+site_name: Avaliação de Qualidade
 
 theme:
   name: material
   language: pt-BR
+  palette:
+    # Modo Claro
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+    # Modo Escuro
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - content.code.copy
+
+nav:
+  - Fase 1: fase1/index.md

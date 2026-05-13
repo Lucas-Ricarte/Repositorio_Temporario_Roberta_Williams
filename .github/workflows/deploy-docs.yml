@@ -8,10 +8,10 @@ on:
     paths:
       - "mkdocs.yml"
       - "docs/**"
-  workflow_dispatch: # permite execução manual pela aba Actions
+  workflow_dispatch: 
 
 permissions:
-  contents: write # necessário para publicar no branch gh-pages
+  contents: write 
 
 jobs:
   deploy:
@@ -22,7 +22,7 @@ jobs:
       - name: Checkout do repositório
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # histórico completo necessário para o plugin git-dates
+          fetch-depth: 0 
 
       - name: Configurar Python
         uses: actions/setup-python@v5
