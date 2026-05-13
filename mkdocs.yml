@@ -26,4 +26,5 @@ theme:
     - content.code.copy
 
 nav:
+  - Início: index.md
   - Fase 1: fase1/index.md
