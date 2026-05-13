@@ -10,16 +10,41 @@ Esta página unifica todos os tópicos da Fase 1, fornecendo uma visão completa
 ---
 
 ## 2. Descrição estruturada do software
-[Inserir texto aqui]
+O objetivo desta página é descrever como o produto de software que está sendo avaliado é estruturado e os pontos de relevâncias para o estudo proposto. 
+
+
+
+
+### 2.1 Informações Básicas
+
+
+- **Nome do Produto:** Mural UnB
+- **Versão do Produto:** 1.0.0
+- **Data da Release da Versão:** 02 de Dezembro de 2025 
+- **Aplicação do Produto:** Encotrar oportunidades dentro da UnB
+- **Modúlos do Produto:** Feed, Mural, Sobre e Documentação
+- **Repositório do Código Principal:** [GitHub](https://github.com/unb-mds/2025-2-Mural-UnB) 
+- **Licença do Produto:** MIT license
+
+
+### 2.2 Sobre o uso do Unb Mural
+- **Funções do Produto:** Busca de eventos, projetos e empresas juniores e Priorização de feed com machine learning.
+- **Público Alvo:** Alunos da UnB
+- **Dispositivos:** É responsivo para Desktop, Notebook e Smartphones.
+- **Conectividade:** WEB-Online
+
+
+**Diagrama de Contexto**
+  
+<figure align="center">
+   <img src="../imagem/diagramadecontexto.png">
+   <figcaption>Autor: Carlos</figcaption>
+</figure>
 
 ---
 
-## 3. Classificação do tipo de produto
-[Inserir texto aqui]
 
----
-
-## 4. Propósito da avaliação e uso pretendido dos resultados
+## 3. Propósito da avaliação e uso pretendido dos resultados
 
 **Propósito da avaliação:**
 O principal propósito desta avaliação é essencialmente didático e pedagógico, focado na aplicação prática das técnicas de avaliação de qualidade de produto de software estabelecidas pelos modelos e normas da família SQuaRE. Por meio dessa execução, a equipe avaliadora busca desenvolver e aprimorar suas capacidades críticas e analíticas ao analisar um sistema real. A avaliação visa não apenas evidenciar os pontos fortes da arquitetura do sistema , mas também mapear e expor suas vulnerabilidades atuais.
@@ -29,14 +54,14 @@ Os dados e diagnósticos obtidos com a avaliação serão utilizados em duas fre
 
 ---
 
-## 5. Modelo de Qualidade
+## 4. Modelo de Qualidade
 
 O modelo adotado é o **Modelo de Qualidade do Produto SQuaRE (ISO/IEC 25010)**. O modelo de qualidade do produto originalmente categoriza as propriedades de qualidade do produto de software em oito características: adequação funcional, eficiência de desempenho, compatibilidade, usabilidade, confiabilidade, segurança, manutenibilidade e portabilidade. Cada característica é composta por um conjunto de subcaracterísticas relacionadas.
 
 ![diagrama](../imagem/DiagramaOriginal.png)
 > Figura: Diagrama Qualidade de Produto. Fonte: Norma 25010
 
-### 5.1 Adaptação do Modelo
+### 4.1 Adaptação do Modelo
 
 Adaptamos o modelo SQuaRE (ISO/IEC 25010) original para ignorar as visões de "Manufatura" (concentrada em processos internos de codificação) e pela ideia de focar estritamente na **Visão do Produto** e **Visão do Usuário**. Além de não selecionarmos usabilidade pela restrição da atividade. Essas escolha são justificadas pelas necessidades dos principais stakeholders (estudantes, professores e administração), que dependem da veracidade absoluta e do acesso ininterrupto às informações acadêmicas oficiais.
 
@@ -49,7 +74,7 @@ Assim, para esta avaliação foram selecionadas as seguintes características:
 1. **Confiabilidade (Reliability)**: Define o grau em que o sistema executa funções específicas sob condições estabelecidas por um período de tempo.
 2. **Segurança (Security)**: Fundamental para proteger os dados e as informações contra acessos e modificações não autorizadas.
 
-### 5.2 Diagrama Adaptado (visão geral)
+### 4.2 Diagrama Adaptado (visão geral)
 
 O diagrama abaixo foca na hierarquia das qualidades selecionadas para o Mural UnB:
 
@@ -58,15 +83,15 @@ O diagrama abaixo foca na hierarquia das qualidades selecionadas para o Mural Un
 
 --- 
 
-## 6. Seleção de Características
+## 5. Seleção de Características
 
 Como visto acima, selecionamos Confiabilidade e Segurança.
 
-### 6.1 Justificativa de Priorização
+### 5.1 Justificativa de Priorização
 
 A justificativa de priorização reside no fato de o Mural UnB lidar com avisos oficiais e horários. A **Confiabilidade** é prioritária para garantir que o serviço não fique indisponível durante períodos críticos (como a matrícula). Enquanto a **Segurança** é essencial para evitar que usuários não autorizados alterem informações públicas, o quê causaria desinformação na comunidade acadêmica.
 
-### 6.2 Classificação de Subcaracterísticas (Escala 1 a 5)
+### 5.2 Classificação de Subcaracterísticas (Escala 1 a 5)
 
 1. **Confiabilidade (Reliability)**: 
     * Subcaracterísticas: Maturidade, Disponibilidade, Tolerância a Falhas, Recuperabilidade.
@@ -102,7 +127,7 @@ A justificativa de priorização reside no fato de o Mural UnB lidar com avisos 
 
 No tocante aos Níveis de Profundidade, as Subcaracterísticas com nível 5 exigirão testes de estresse (Disponibilidade) e testes de invasão/SQL Injection (Integridade). As de Níveis 3 e 4 envolverão apenas análise documental e revisões de código. Este método avalia dois eixos fundamentais, quais sejam, o de impacto, que é a magnitude das consequências negativas para o Mural  UnB e seus usuários caso a subcaracterística falhe (exemplo: desinformação em massa) e o de risco (probabilidade), que é  a chance de uma ameaça explorar uma vulnerabilidade do sistema, considerando o ambiente de uso e histórico de falhas.
 
-### 6.3 Método de Priorização
+### 5.3 Método de Priorização
 
 O método adotado é a Priorização Quantitativa Ponderada. Este método calcula a relevância de cada subcaracterística através da fórmula:
 
@@ -110,7 +135,7 @@ O método adotado é a Priorização Quantitativa Ponderada. Este método calcul
 
 O peso define a importância estratégica da característica para o negócio (Confiabilidade = 10; Segurança = 9). Enquanto o impacto (0-5) avalia a gravidade da falha para o usuário final. E o risco (0-5) avalia a probabilidade de ocorrência de falhas ou vulnerabilidades no contexto atual do sistema. Essa abordagem permite um critério de Go/No-Go fundamentado, focando os esforços de teste nos pontos de maior risco sistêmico.
 
-### 6.4 Matriz de Priorização (Ponderada)
+### 5.4 Matriz de Priorização (Ponderada)
 
 A priorização utiliza uma escala de 0 a 5 para Impacto e Risco, multiplicada pelo peso da característica.
 
@@ -124,7 +149,7 @@ A priorização utiliza uma escala de 0 a 5 para Impacto e Risco, multiplicada p
 
 --- 
 
-## 7. Escopo da Avaliação
+## 6. Escopo da Avaliação
 
 A avaliação será limitada ao backend (API), que gerencia o feed de notícias e a persistência dos dados no banco de dados. Ao passo que a profundidade será o Nível 3 (Análise detalhada das subcaracterísticas por meio de métricas derivadas e propriedades mensuráveis). Ressalte-se que fora de escopo existe a interface do usuário (Front-end), performance em dispositivos móveis específicos e portabilidade para outros sistemas operacionais, porque o foco inicial é a estabilidade do núcleo da informação antes de validar a experiência estética.
 
@@ -149,9 +174,9 @@ Para fundamentar a avaliação, são utilizados artefatos que comprovam o atendi
 
 --- 
 
-## 8. Sustentabilidade (ODS e metas)
+## 7. Sustentabilidade (ODS e metas)
 
-## 8.1 Identificação das ODS e submetas
+## 7.1 Identificação das ODS e submetas
 
 Através do objetivo e premissa geral do software **Mural UnB** estabelecido no próprio README do projeto no GitHub pelos mantenedores: 
 
@@ -193,7 +218,7 @@ podemos paralelizar os seguintes **Objetivos de Desenvolvimentos Sustentável (O
 
       * ODS 9.b – Apoiar o desenvolvimento tecnológico, a pesquisa e a inovação nacionais nos países em desenvolvimento, inclusive garantindo um ambiente político propício para, entre outras coisas, diversificação industrial e agregação de valor às commodities.
 
-## 8.1 Identificação dos Indicadores
+## 7.1 Identificação dos Indicadores
 
 Com isso conseguimos identificar que através da proposta do objetivo geral e da premissa citada o software tem como meta de cumprimento às submetas de ODS identificadas que contribuem para o crescimento dos seguintes indicadores: 
 
@@ -215,13 +240,13 @@ Com isso conseguimos identificar que através da proposta do objetivo geral e da
 
    * Indicador 9.b.1 - Proporção do valor adicionado nas indústrias de média e alta intensidade tecnológica no valor adicionado total.
  
-## 8.3 Alinhamento com a Avaliação de Qualidade do Produto de Software
+## 7.3 Alinhamento com a Avaliação de Qualidade do Produto de Software
 
 Portanto a avaliação de qualidade do Mural UnB que vamos orquestrar com foco nas características de confiabilidade e segurança não tem como objetivo apenas medir essas características sem pretenção alguma, mas sim verificar se através das métricas obtidas o software impacta a sociedade positivamente através de uma ferramenta que de fato possui qualidade nos aspectos observados, sendo esses os aspectos mais relevantes para o contexto do software conforme identificado na sessão “**6. Seleção de Características**”.
 
 ---
 
-## 9. Referências de rastreabilidade (entregas e auditoria)
+## 8. Referências de rastreabilidade (entregas e auditoria)
 Links importantes para validação do professor.
 
 - **Link da GitPage:** [Inserir link]
@@ -235,7 +260,7 @@ Links importantes para validação do professor.
 
 ---
 
-## 10. Tabela de contribuição da equipe
+## 9. Tabela de contribuição da equipe
 
 | Nome / ID do integrante | Papel / atividades realizadas na fase 1 | Esforço/participação |
 | :--- | :--- | :--- |
